@@ -1,6 +1,6 @@
 title:            afinn.net
 description:      Bending 1's and 0's to my will.
-disqus_shortname: 
+disqus_shortname: alanfinngithubio
 reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
@@ -12,16 +12,16 @@ owner:
   name:           Alan Finn
   avatar:         avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
-  email:          you@email.com
+  email:          acfinn@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
-  facebook:       
-  github:         
-  stackexchange:  
+  # facebook:       
+  # github:         
+  # stackexchange:  
   linkedin:       
   instagram:      
-  flickr:         
-  tumblr:         
+  # flickr:         
+  # tumblr:         
   # google plus id, include the '+', eg +mmistakes
   google_plus:
 
@@ -74,6 +74,7 @@ exclude:
   - .asset-cache
   - .bundle
   - .jekyll-assets-cache
+  - .jekyll-metadata
   - .sass-cache
   - CHANGELOG
   - Capfile
