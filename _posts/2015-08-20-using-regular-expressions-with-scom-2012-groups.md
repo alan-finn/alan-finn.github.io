@@ -7,15 +7,6 @@ categories:
 - SCOM 2012
 tags:
 - regex
-meta:
-  _edit_last: '1'
-  _wpas_done_all: '1'
-author:
-  login: alan
-  email: acfinn@gmail.com
-  display_name: alan
-  first_name: ''
-  last_name: ''
 ---
 <p>&nbsp;</p>
 <p>A few examples of using regular expressions in group targeting in SCOM.</p>
