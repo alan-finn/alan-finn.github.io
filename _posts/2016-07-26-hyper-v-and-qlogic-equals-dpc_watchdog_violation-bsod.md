@@ -15,7 +15,7 @@ After analyzing the memory.dmp, the stack pointed to the QLogic driver (dlxgnd64
 
 After additional digging, I found some errors in the System event log for ID 106 regarding load balanced teaming on the NIC. After a little research, I ran across <a href="https://support.microsoft.com/en-us/kb/2974384">this article</a> on MS Support. Again, I'll let you read the details but in a nutshell, the NIC's in the team were overlapping their usage of the same processors. As I was using hyper-threading, I followed the steps in the article to specify specific processors for each NIC and the max number of processors VMQ could use:
 
-**Set-NetAdapterVMQ -Name "Ethernet1" -BaseProcessorNumber 4 -MaxProcessors 8** (VMQ would use processors 4,6,8,10,12,14,16,18)
+**Set-NetAdapterVMQ -Name "Ethernet1" -BaseProcessorNumber 4 -MaxProcessors 8** (VMQ would use processors 4,6,8,10,12,14,16,18)<br />
 **Set-NetAdapterVMQ -Name "Ethernet2" -BaseProcessorNumber 20 -MaxProcessors 8** (VMQ would use processors 20,22,24,26,28,30,32,34)
 
 This did not require a restart and once I made the changes on the NIC's, I was able to Live Migrate without any crashes. I will also note that although I updated the drivers, I also tested this without updating on another Hyper-V cluster with identical hardware and the VMQ settings resolved the issue there. I burned about 6 to 8 hours banging my head on various troubleshooting items including several I didn't include here so I hope this post saves you a bit of time and headache.
