@@ -1,5 +1,5 @@
 title:            afinn.net
-description:      Bending 1's and 0's to my will.
+description:      Bending 0's and 1's to my will.
 disqus_shortname: alanfinngithubio
 reading_time:     true
 words_per_minute: 200
@@ -10,8 +10,8 @@ url:              https://alan-finn.github.io
 # Owner/author information
 owner:
   name:           Alan Finn
-  avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
+  avatar:         http://assets.afinn.net/me.jpg
+  bio:            "Bending 0's and 1's to my will."
   email:          acfinn@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
