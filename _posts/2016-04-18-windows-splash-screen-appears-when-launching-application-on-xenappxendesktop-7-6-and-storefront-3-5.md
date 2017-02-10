@@ -11,8 +11,8 @@ After upgrading Storefront from 2.5 to 3.5, I noticed that all published applica
 
 
 
-The application continued to launch successfully, but this splash screen did not start appearing until after the Storefront upgrade. This also did not occur on VDA's running on Windows 2008R2, only 2012 servers. The fix was to update the following registry key on the VDA:
-**Key**: HKEY_LOCAL_MACHINESOFTWAREWow6432NodeCitrixLogon<br />
+The application continued to launch successfully, but this splash screen did not start appearing until after the Storefront upgrade. This also did not occur on VDA's running on Windows 2008R2, only 2012 servers. The fix was to update the following registry key on the VDA:<br />
+**Key**: HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\CitrixLogon<br />
 **Name:** DisableStatus<br />
 **Type:** REG_DWORD<br />
 **Value:** 0x00000000
