@@ -4,7 +4,6 @@ title: "Search"
 description: "Search the site."
 comments: false
 share: false
-reading_time: false
 ---  
 
 Search for articles on this site.
