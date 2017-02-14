@@ -1,12 +1,11 @@
 ---
 layout: post
-comments: true
 title: Citrix User Store Profile Cleaner
-date: 2017-02-14 11:51:10 -05:00
 categories:
-- SCOM 2012
+- Citrix
 tags:
-- regex
+- UPM
+- Profiles
 ---
 
 So you were probably redirected here and are wondering where is the tool? 
