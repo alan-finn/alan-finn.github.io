@@ -8,7 +8,8 @@ image:
   feature: vector-tech-wave.jpg
 ---
 
-if (window.location.pathname.indexOf('2016/04/06/citrix-user-profile-store-cleaner') > -1) {	
+<script>(function() {
+	if (window.location.pathname.indexOf('2016/04/06/citrix-user-profile-store-cleaner') > -1) {	
 		window.location.replace("http://www.afinn.net/citrix/citrix-user-store-profile-cleaner/");
 	}
 	if (window.location.pathname.indexOf('2015/12/28/netscaler-10-5-and-windows-2012-r2-schannel-errors-with-tls-1-2') > -1) {	
@@ -20,6 +21,8 @@ if (window.location.pathname.indexOf('2016/04/06/citrix-user-profile-store-clean
 	if (window.location.pathname.indexOf('2016/04/06/citrix-user-profile-store-cleaner') > -1) {	
 		window.location.replace("http://www.afinn.net/citrix/citrix-user-store-profile-cleaner/");
 	}
+}());
+</script>
 {% for post in paginator.posts %}
 <article class="hentry">
   <header>
