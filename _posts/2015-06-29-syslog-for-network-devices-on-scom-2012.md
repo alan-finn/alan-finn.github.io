@@ -1,6 +1,10 @@
 ---
 layout: post
 title: Syslog for Network Devices on SCOM 2012
+redirect_from:
+- "/2015/06/syslog-for-network-devices-on-scom-2012"
+- "/index.php/2015/06/29/syslog-for-network-devices-on-scom-2012/"
+- "/index.php/tag/syslog/"
 date: 2015-06-29 09:09:33.000000000 -05:00
 categories:
 - SCOM 2012

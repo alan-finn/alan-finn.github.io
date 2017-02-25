@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Purging Kerberos Ticket Cache on Remote Machines
+redirect_from: "/2015/08/purging-kerberos-ticket-cache-on-remote-machines/"
 date: 2015-08-05 14:49:43.000000000 -05:00
 categories:
 - Scripting
@@ -8,7 +9,7 @@ tags:
 - Kerberos
 - Powershell
 - Scripting
----
+---
 
 I was recently asked to help the DBA and Storage teams with an issue related to backup authentication. From what I was told, they had been testing different authentication methods to access a Data Domain device as backup target on several SQL clusters. When attempting to normalize everything using a single account and authentication mechanism, they were running into authentication issues getting back to the share on the Data Domain due to cached  Kerberos tickets. The vendor recommended that they purge the Kerberos cache on each of the devices to clear the tickets. The kicker was that there were quite a few servers involved in this issue so logging on and manually running klist.exe would have been fairly time consuming. The DBA's were not very keen on my first suggestion to just remotely reboot the passive nodes and let clustering work it's magic. They responded by calling me crazy and making absurd claims about production outage this and change control that, etc. Geesh (chuckle)!
 

@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Citrix User Store Profile Cleaner
+redirect_from:
+- "/2016/04/citrix-user-profile-store-cleaner"
+- "/index.php/2016/04/06/citrix-user-profile-store-cleaner/"
 categories:
 - Citrix
 tags:

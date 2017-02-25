@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hyper-V and QLogic Equals DPC_WATCHDOG_VIOLATION BSOD
+redirect_from: "/index.php/2016/07/26/hyper-v-and-qlogic-equals-dpc_watchdog_violation-bsod/"
 categories:
 - Hyper-V
 tags:

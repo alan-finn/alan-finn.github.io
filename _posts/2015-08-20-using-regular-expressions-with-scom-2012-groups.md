@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: Using Regular Expressions with SCOM 2012 Groups
+redirect_from: "/2015/08/using-regular-expressions-with-scom-2012-groups/"
 date: 2015-08-20 21:08:10.000000000 -05:00
 categories:
 - SCOM 2012

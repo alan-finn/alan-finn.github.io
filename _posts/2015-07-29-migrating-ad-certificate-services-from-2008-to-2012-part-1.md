@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Migrating AD Certificate Services from 2008 to 2012 - Part 1
+redirect_from: "/index.php/2015/07/29/migrating-ad-certificate-services-from-2008-to-2012-part-1/"
 date: 2015-07-29 14:28:30.000000000 -05:00
 categories: []
 tags:

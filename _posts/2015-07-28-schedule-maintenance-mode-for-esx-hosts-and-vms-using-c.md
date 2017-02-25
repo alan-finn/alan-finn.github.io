@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Schedule Maintenance Mode for ESX hosts and VM's Using C#
+redirect_from:
+- "/index.php/2015/07/28/schedule-maintenance-mode-for-esx-hosts-and-vms-using-c/"
+- "/2015/07/schedule-maintenance-mode-for-esx-hosts-and-vms-using-c/"
 date: 2015-07-28 11:00:37.000000000 -05:00
 categories:
 - SCOM 2012

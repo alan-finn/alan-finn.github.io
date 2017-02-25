@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Windows Splash Screen Appears When Launching Application on XenApp/XenDesktop 7.6 and Storefront 3.5
+redirect_from:
+- "/2016/04/windows-splash-screen-appears-when-launching-application-on-xenappxendesktop-7-6-and-storefront-3-5/"
+- "/index.php/2016/04/18/windows-splash-screen-appears-when-launching-application-on-xenappxendesktop-7-6-and-storefront-3-5/"
 date: 2016-04-18 10:29:54.000000000 -05:00
 categories:
 - Citrix
