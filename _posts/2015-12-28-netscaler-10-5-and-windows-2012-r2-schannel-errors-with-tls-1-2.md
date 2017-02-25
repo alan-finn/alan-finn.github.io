@@ -2,8 +2,7 @@
 layout: post
 title: Netscaler 10.5 and Windows 2012 R2 SChannel Errors with TLS 1.2
 date: 2015-12-28 19:11:31.000000000 -06:00
-redirect_from:
-- "/2015/12/28/netscaler-10-5-and-windows-2012-r2-schannel-errors-with-tls-1-2"
+redirect_from: "/2015/12/28/netscaler-10-5-and-windows-2012-r2-schannel-errors-with-tls-1-2.html"
 categories:
 - Citrix
 tags:
