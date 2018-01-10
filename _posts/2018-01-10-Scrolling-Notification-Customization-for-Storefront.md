@@ -64,3 +64,6 @@ animation: StoreMarquee 30s linear infinite;
 
 ![Storefront Custom Banner](http://assets.afinn.net/sf-custom-banner.png)	
 
+
+
+Download the tool/source [here](https://github.com/alan-finn/StoreFrontBanner).
