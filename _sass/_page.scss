@@ -28,10 +28,11 @@ body {
 	// Dotted line underlines for links
 	p > a,
 	li > a {
-		border-bottom: 1px dotted lighten($link-color, 50);
+		border-bottom: 1.5px dotted darken($link-color, 50);
 
 		&:hover {
 			border-bottom-style: solid;
+			font-weight: bold;
 		}
 	}
 
