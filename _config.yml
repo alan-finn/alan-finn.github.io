@@ -40,6 +40,7 @@ future:      false  # publish future dated posts --  true, false (default)
 highlighter: rouge
 markdown:    kramdown
 plugins:
+  - jekyll-include-cache
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-gist
@@ -93,3 +94,5 @@ exclude:
   - package.json
   - spec
   - tmp
+
+remote_theme: "mmistakes/minimal-mistakes@4.15.2"
