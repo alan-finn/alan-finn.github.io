@@ -9,7 +9,7 @@ tags:
 - Route53
 ---
 
-I needed a way to backup some Route53 zones in an automated fashion. While there are some individuals who like to wrap this up in a CI/CD pipeline, that just adds complexity to a process that doesn't need that much overhead. I'll leave the Terraform/Jenkins/etc. other, more complex infrastructure that justifies the administration that comes along with the DevOps tools. Powershell it is then!
+I needed a way to backup some Route53 zones in an automated fashion. While there are some individuals who like to wrap this up in a CI/CD pipeline, that just adds complexity to a process that doesn't need that much overhead. I'll leave the Terraform/Jenkins/etc. and other, more complex infrastructure for another time that justifies the administration that comes along with the DevOps tools. Powershell it is then!
 
 The script I configured will create subfolders on the local system where the scheduled task is run in the same directory as the script which will contain all the exported zones. They are currently using a date format to name the folders so if you plan on backing up more than once per day, you will want to modify the script to use a different naming convention so they don't get overwritten on the same day. The local folders will be copied up to an S3 bucket as well. The script is currently configured to remove both local folders and files in S3 that are older than 60 days (again, modifiable). *The script makes no changes to the Route53 zones; it is just an export process.*
 
