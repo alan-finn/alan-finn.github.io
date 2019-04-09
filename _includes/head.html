@@ -59,5 +59,13 @@
 {% if page.image.background or site.background %}
 {% capture background %}{% if page.image.background %}{{ page.image.background }}{% else %}{{ site.background }}{% endif %}{% endcapture %}
 {% unless background contains 'http://' or background contains 'https://' %}{% capture background %}{{ site.url }}/images/{{ background }}{% endcapture %}{% endunless %}
-<style type="text/css">body {background-image:url({{ background }});}</style>
+<style type="text/css">
+    body {
+        background-image:url({{ background }});
+    }
+</style>
+{% endif %}
+
+{% if site.google_analytics and jekyll.environment == 'production' %}
+{% include analytics.html %}
 {% endif %}
