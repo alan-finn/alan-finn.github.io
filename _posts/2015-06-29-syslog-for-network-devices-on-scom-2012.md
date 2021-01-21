@@ -71,13 +71,13 @@ A good example for a first rule would be alerting on all Severity 0 events.
 
 1. In the **Authoring** pane of the Operations Manager console, right click on **Rules** and create a new Rule.
 
-2. Select the **Syslog (Alert)** rule under *Event Based*. ![alt text](http://assets.afinn.net/scom2012_rule_type-1.png "SCOM 2012 Rule Type")
+2. Select the **Syslog (Alert)** rule under *Event Based*. ![alt text](https://www.afinn.net/images/scom2012_rule_type-1.png "SCOM 2012 Rule Type")
 
 
-3. Give the rule a name and select the group created earlier. This group should contain objects of the **Node** class. Be sure to **uncheck** the *Rule is enabled* checkbox. These rules should all be created as disabled; they will be enabled via overrides later. ![alt text](http://assets.afinn.net/scom2012_rule_target-1.png "SCOM 2012 Rule Target")
+3. Give the rule a name and select the group created earlier. This group should contain objects of the **Node** class. Be sure to **uncheck** the *Rule is enabled* checkbox. These rules should all be created as disabled; they will be enabled via overrides later. ![alt text](https://www.afinn.net/images/scom2012_rule_target-1.png "SCOM 2012 Rule Target")
 
 
-4. To configure the filter two parameters need to be defined: **Severity** and **HostName**. The severity is self explanatory. The HostName will be critical to prevent the alert from triggering once for each device in the group. As this rule is targeting Severity 0 (zero) events, set the first parameter to **Severity Equals 0**. Insert an additional parameter and set it to **HostName Equals `$Target/Property[Type="System!System.Entity"]/DisplayName$`**. This will ensure the alert only fires once for each device it matches instead of all group members. This is different from Alert Suppression.![alt text](http://assets.afinn.net/scom2012_syslog_rule_filters-1.png "SCOM 2012 Syslog Rule Filters")
+4. To configure the filter two parameters need to be defined: **Severity** and **HostName**. The severity is self explanatory. The HostName will be critical to prevent the alert from triggering once for each device in the group. As this rule is targeting Severity 0 (zero) events, set the first parameter to **Severity Equals 0**. Insert an additional parameter and set it to **HostName Equals `$Target/Property[Type="System!System.Entity"]/DisplayName$`**. This will ensure the alert only fires once for each device it matches instead of all group members. This is different from Alert Suppression.![alt text](https://www.afinn.net/images/scom2012_syslog_rule_filters-1.png "SCOM 2012 Syslog Rule Filters")
 5. Finally, you want to add a little more description to the alert notification. I find the following is a fairly descriptive summary:
 
 ```
@@ -90,14 +90,14 @@ Time Stamp: $Data/EventData/DataItem/TimeStamp$
 Host Name: $Data/EventData/DataItem/HostName$
 ```
  <br /> 
-![alt text](http://assets.afinn.net/scom2012_alert_description-1.png "Alert Description")
+![alt text](https://www.afinn.net/images/scom2012_alert_description-1.png "Alert Description")
 
 
 6. Go back into the properties of the rule and select the **Configuration** tab.
 7. Select the **Edit** button under **Responses** at the bottom.
 8. Click the **Alert Suppression** button.
 9. Select the following checkboxes to prevents duplicate alerts: **Event Source, Logging Computer, **and **Event Level**. Save the changes.
-10. The final step is to Override the alert for the target group(s) you want the alert to be functional and set the override to **Enable**.![alt text](http://assets.afinn.net/scom2012_rule_override-1.png "SCOM 2012 Rule Override")
+10. The final step is to Override the alert for the target group(s) you want the alert to be functional and set the override to **Enable**.![alt text](https://www.afinn.net/images/scom2012_rule_override-1.png "SCOM 2012 Rule Override")
 
 
 Another option with more flexibility is to use the **Message** parameter in Step 4. This allows for the use of regular expression matching on the description string. For example, let's say you want to be alerted if a switch detects a duplicate IP or MAC address on the network. This can be done with a single parameter line as follows:
