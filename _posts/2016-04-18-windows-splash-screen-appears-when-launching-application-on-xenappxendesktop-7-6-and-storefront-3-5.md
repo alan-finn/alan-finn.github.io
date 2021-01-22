@@ -10,7 +10,7 @@ categories:
 tags:
 - Citrix
 ---
-After upgrading Storefront from 2.5 to 3.5, I noticed that all published applications where the VDA was running on Windows 2012R2 started displaying the Windows logon process in a splash screen.![alt text](http://assets.afinn.net/win2012r2_splashscreen.png "win2012r2_splashscreen")
+After upgrading Storefront from 2.5 to 3.5, I noticed that all published applications where the VDA was running on Windows 2012R2 started displaying the Windows logon process in a splash screen.![alt text](https://www.afinn.net/images/win2012r2_splashscreen.png "win2012r2_splashscreen")
 
 
 

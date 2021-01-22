@@ -62,7 +62,7 @@ animation: StoreMarquee 30s linear infinite;
 
 
 
-![Storefront Custom Banner](http://assets.afinn.net/sf-custom-banner.png)	
+![Storefront Custom Banner](https://www.afinn.net/images/sf-custom-banner.png)	
 
 
 

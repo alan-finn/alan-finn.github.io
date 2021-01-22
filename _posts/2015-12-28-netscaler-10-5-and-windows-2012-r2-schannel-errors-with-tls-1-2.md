@@ -21,11 +21,11 @@ Tracking down the servers based on their STA ID in the ticket, I noticed that us
 Well, we obviously have an SSL issue, but these codes aren’t exactly pointing me anywhere. Looking up the error code on the RFC page for the TLS protocol (<a href="http://tools.ietf.org/html/rfc5246">http://tools.ietf.org/html/rfc5246</a>) I found that error code 40 is a handshake failure (you can find this in the A.3 part of the appendix in the Alert Messages section). I can’t remember where exactly I found the enum definition for the Schannel 1205 code, but it basically means that a fatal error was send to the endpoint and the connection was being forcibly terminated. At least I now knew there was an issue with the SSL handshake between the Netscalers and the Windows 2012 R2 delivery controllers. Time for some network tracing.</p>
 Firing up Wireshark on the delivery controller, I could see that the connection was getting immediately reset by the server after the **Client Hello** from the Netscaler.
 
-<a href="http://assets.afinn.net/windows_server_2012_rst_ack-1.png" rel="attachment wp-att-109"><img class="aligncenter size-full wp-image-109" src="http://assets.afinn.net/windows_server_2012_rst_ack-1.png" alt="Windows_2012_R2_RST_ACK" width="1099" height="107" /></a>
+<a href="https://www.afinn.net/images/windows_server_2012_rst_ack-1.png" rel="attachment wp-att-109"><img class="aligncenter size-full wp-image-109" src="https://www.afinn.net/images/windows_server_2012_rst_ack-1.png" alt="Windows_2012_R2_RST_ACK" width="1099" height="107" /></a>
 
 Expanding the **Client Hello** packet in the capture, I could see a list of ciphers currently being offered by the Netscaler. *(Note – for the sake of easier troubleshooting, I left the default grouping of ciphers in place as it was a large group of widely accepted ciphers until I identified the issue and then trimmed down the cipher list. You should limit the number of ciphers available on the virtual server of your Access Gateway to just what you need and leverage the more current stronger methods available such as AES 256 over RC4 and MD5, etc. if possible.)*
 
-<a href="http://assets.afinn.net/cipher_suites-1.png" rel="attachment wp-att-107"><img class="aligncenter size-full wp-image-107" src="http://assets.afinn.net/cipher_suites-1.png" alt="Cipher suites" width="405" height="263" /></a>
+<a href="https://www.afinn.net/images/cipher_suites-1.png" rel="attachment wp-att-107"><img class="aligncenter size-full wp-image-107" src="https://www.afinn.net/images/cipher_suites-1.png" alt="Cipher suites" width="405" height="263" /></a>
 
 
 
@@ -37,7 +37,7 @@ Next, I configured the **SSL Cipher Suite Order** on the windows server to match
 3.  Select the **Enabled** option and then follow the instructions in the **Help** section of the policy. Basically, all the ciphers you want will be listed on a single line separated by commas with no spaces anywhere.
 4.  You must reboot the server for the changes to take effect.
 
-<a href="http://assets.afinn.net/policy_cipher_order-1.png" rel="attachment wp-att-108"><img class="aligncenter size-full wp-image-108" src="http://assets.afinn.net/policy_cipher_order-1.png" alt="SSL Cipher Order Policy" width="560" height="514" /></a>
+<a href="https://www.afinn.net/images/policy_cipher_order-1.png" rel="attachment wp-att-108"><img class="aligncenter size-full wp-image-108" src="https://www.afinn.net/images/policy_cipher_order-1.png" alt="SSL Cipher Order Policy" width="560" height="514" /></a>
 
 
 

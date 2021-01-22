@@ -15,14 +15,14 @@ I put these steps together using information and videos from this site <a href="
      a. C:\\CABackupDatabase<br />
      b. C:\\CABackupConfig
 
-2. Open the **Certification Authority** snap-in, right click on the CA name, and select **Properties**.<br />![alt text](http://assets.afinn.net/backup_ca-1.png "backup_ca")
+2. Open the **Certification Authority** snap-in, right click on the CA name, and select **Properties**.<br />![alt text](https://www.afinn.net/images/backup_ca-1.png "backup_ca")
 
    ​
 
 
 3.    Click Next when the wizard launches.
 
-4.    At the next screen, check the boxes next to **Private key and CA certificate** and **Certificate database and certificate database log**. Select the *C:\\CABackupDatabase* folder created in Step 1. Click **Next**.![alt text](http://assets.afinn.net/ca_items_to_backup-1.png "ca_items_to_backup")
+4.    At the next screen, check the boxes next to **Private key and CA certificate** and **Certificate database and certificate database log**. Select the *C:\\CABackupDatabase* folder created in Step 1. Click **Next**.![alt text](https://www.afinn.net/images/ca_items_to_backup-1.png "ca_items_to_backup")
 
          ​
 
@@ -31,7 +31,7 @@ I put these steps together using information and videos from this site <a href="
 
 6. Verify that the certificate and database files were exported in the target directory.
 
-7. Export the **HKLMSYSTEMCurrentControlSetServicesCertSvcConfiguration<CA Name>** key to the *C:\\CABackupConfig* directory created in Step 1.<br />![alt text](http://assets.afinn.net/ca_config_regkey-1.png "ca_config_regkey")
+7. Export the **HKLMSYSTEMCurrentControlSetServicesCertSvcConfiguration<CA Name>** key to the *C:\\CABackupConfig* directory created in Step 1.<br />![alt text](https://www.afinn.net/images/ca_config_regkey-1.png "ca_config_regkey")
 
    ​
 
@@ -44,7 +44,7 @@ I put these steps together using information and videos from this site <a href="
 
 11. After restarting, finish the configuration of the ADCS.
 
-12. Select **Certificate Authority**, then **Next**.<br />![alt text](http://assets.afinn.net/ca_role-1.png "ca_role")<br /><br />
+12. Select **Certificate Authority**, then **Next**.<br />![alt text](https://www.afinn.net/images/ca_role-1.png "ca_role")<br /><br />
 
 
 
@@ -52,11 +52,11 @@ I put these steps together using information and videos from this site <a href="
 
 14.  Select **Root CA** as the CA Type and click **Next**.
 
-15.  At the *Specify the type of the private key* screen, select **Use existing private key** and the option **Select a certificate and use its associated private key**. Click **Next**.<br />![alt text](http://assets.afinn.net/select_cert_privatekey-1.png "select_cert_privatekey")<br /><br />
+15.  At the *Specify the type of the private key* screen, select **Use existing private key** and the option **Select a certificate and use its associated private key**. Click **Next**.<br />![alt text](https://www.afinn.net/images/select_cert_privatekey-1.png "select_cert_privatekey")<br /><br />
 
-16.  Click the **Import **button and browse to the pfx certificate backed up from the Windows 2008 root CA. Enter the password then click It will take a few seconds for the certificate to appear, when it does, select the certificate name and click **Next**.<br />![alt text](http://assets.afinn.net/import_cert_pass-1.png "import_cert_pass")<br /><br />
+16.  Click the **Import **button and browse to the pfx certificate backed up from the Windows 2008 root CA. Enter the password then click It will take a few seconds for the certificate to appear, when it does, select the certificate name and click **Next**.<br />![alt text](https://www.afinn.net/images/import_cert_pass-1.png "import_cert_pass")<br /><br />
 
-17.  Accept the defaults for the database and log locations or specify a different location. Click **Next**.<br />![alt text](http://assets.afinn.net/specify_ca_database-1.png "specify_ca_database")<br /><br />
+17.  Accept the defaults for the database and log locations or specify a different location. Click **Next**.<br />![alt text](https://www.afinn.net/images/specify_ca_database-1.png "specify_ca_database")<br /><br />
 
 18.  Verify the settings in the **Confirmation** page and click the **Configure**
 
@@ -66,7 +66,7 @@ I put these steps together using information and videos from this site <a href="
 
 21.  Click **OK** to stop the services.
 
-22.  When the wizard launches, select the checkbox next to **Certificate database and certificate database log**. Browse to the location of the database files backed up from the Windows 2008 Root CA. Click **Next**.<br />![alt text](http://assets.afinn.net/items_to_restore-1.png "items_to_restore")<br /><br />
+22.  When the wizard launches, select the checkbox next to **Certificate database and certificate database log**. Browse to the location of the database files backed up from the Windows 2008 Root CA. Click **Next**.<br />![alt text](https://www.afinn.net/images/items_to_restore-1.png "items_to_restore")<br /><br />
 
      ​
 
